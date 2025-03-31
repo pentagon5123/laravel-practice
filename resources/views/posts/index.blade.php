@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>allBlog</title>
 </head>
 
 <body>
     <h1>Blog name</h1>
     <div>
         @foreach($posts as $post)
-        <h2>{{$post ->title}}</h2>
+        <h2>
+            <a href="/posts/{{$post->id}}">
+                {{$post->title}}
+            </a>
+        </h2>
         <p> {{$post -> body}}</p>
         @endforeach
     </div>
