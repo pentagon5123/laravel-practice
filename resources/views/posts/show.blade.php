@@ -10,17 +10,15 @@
 <body>
     <h1>{{$post->title}}</h1>
     <div>
-
+        <a href="/posts/{{$post->id}}/edit">edit</a>
         <h3>
             本文
         </h3>
         <p> {{$post -> body}}</p>
 
     </div>
+    <a href="/categories/{{$post->category->id}}">{{$post->category->name}}</a>
 
-    <div>
-        <a href="/posts/{{$post->id}}/edit">edit</a>
-    </div>
     <div>
         <a href="/">戻る</a>
     </div>
